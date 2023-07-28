@@ -1,0 +1,41 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    // '@typescript-eslint/no-unused-vars': 0,
+    'jsx-a11y/img-redundant-alt': 0,
+    'no-unused-expressions': 0,
+    'no-new': 0,
+    'react/sort-comp': 0,
+    'react/jsx-boolean-value': 0,
+    'react/no-did-update-set-state': 1,
+    'react/no-array-index-key': 1,
+    'react/self-closing-comp': 1,
+    'no-unneeded-ternary': 0,
+    'no-nested-ternary': 0,
+    'array-callback-return': 0,
+    'no-use-before-define': 0,
+    '@typescript-eslint/no-use-before-define': 0,
+    radix: 0,
+    'consistent-return': 0,
+    'arrow-body-style': 0,
+    'no-debugger': 0,
+    'no-plusplus': 0,
+  },
+};

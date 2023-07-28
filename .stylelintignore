@@ -1,0 +1,9 @@
+*.js
+*.jsx
+*.tsx
+*.ts
+*.proto
+*.md
+
+src/common/less/common.less
+src/common/less/color-variable.less

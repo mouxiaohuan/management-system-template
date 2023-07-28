@@ -1,0 +1,12 @@
+public/
+node_modules/
+dist/
+config/
+public/
+scripts/
+mock/
+env.config.js
+.eslintrc.js
+src/typings
+src/schemas
+tsconfig.json

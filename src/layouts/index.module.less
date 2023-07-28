@@ -1,0 +1,250 @@
+@import "~@/common/less/color-variable.less";
+
+.wrapper {
+    height: 100%;
+}
+
+.layout-home {
+    min-height: 100%;
+
+    .sider {
+        z-index: 9000;
+        padding-top: 10px;
+        background-color: white;
+        border-right: 1px solid #e2e2e2;
+
+        :global {
+            .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+                background-color: #f9f9f9fc;
+            }
+
+            .ant-layout-sider-trigger {
+                position: relative;
+            }
+
+            .anticon-left,
+            .anticon-right {
+                padding: 4px;
+                color: rgb(0 0 0 / 0.8);
+                font-size: 11px;
+                border: 1px solid #d2d1d1;
+                border-radius: 50%;
+
+                &:hover {
+                    color: @primary-color;
+                    border: 1px solid @primary-color;
+                }
+            }
+
+            .ant-menu-vertical {
+                border: 0;
+            }
+
+            .ant-menu-inline {
+                border: 0;
+            }
+
+            .ant-layout-sider-trigger {
+                color: #000;
+                background-color: white;
+                border-right: 1px solid #e2e2e2;
+            }
+        }
+    }
+
+    .loginButton {
+        position: relative;
+        top: 11px;
+        color: @primary-color;
+        background-color: transparent;
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        // min-width: @bodyMaxWidth;
+        margin: auto;
+        padding: 0 30px 0 10px;
+    }
+
+    .header {
+        height: 55px;
+        padding: 0;
+        line-height: 55px;
+        background: white;
+        border-bottom: 1px solid #eaeaea;
+
+        .logoContent {
+            display: flex;
+
+            .logo {
+                height: 26px;
+                margin-top: 15px;
+                margin-left: 10px;
+                padding: 5px;
+                color: white;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 0;
+                line-height: 16px;
+                background: @primary-color;
+                border-radius: 4px;
+                box-shadow: 0 4px 8px rgb(117 107 253 / 0.2);
+            }
+
+            .font {
+                .active {
+                    color: @primary-color;
+                }
+
+                margin: 0 20px 0 4px;
+                color: @fontColor;
+                font-weight: 500;
+                font-size: 21px;
+            }
+        }
+
+        :global {
+            .ant-btn-link {
+                margin-top: 8px;
+                font-size: 18px;
+            }
+
+            .ant-avatar {
+                width: 28px;
+                height: 28px;
+                margin-top: -2px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .userInfo {
+        display: flex;
+        align-items: center;
+
+        .icon {
+            margin-right: "10px";
+            color: @primary-color;
+            font-size: "18px";
+        }
+    }
+
+    .appMenu {
+        min-width: 200px;
+
+        .firstMenu {
+            display: flex;
+        }
+
+        .firstMenuItem {
+            padding: 0 30px;
+            cursor: pointer;
+
+            .active {
+                color: @primary-color;
+            }
+
+            >span {
+                color: @fontColorReverse;
+                font-size: 18px;
+
+                &:hover {
+                    color: @primary-color;
+                }
+            }
+
+            @keyframes mymove {
+                from {
+                    transform: translateY(-100%);
+                }
+
+                to {
+                    transform: translateY(0%);
+                }
+            }
+
+            &:hover {
+                .hoverMenus {
+                    display: block;
+                }
+
+                .hoverMenu {
+                    animation: mymove 0.5s;
+                }
+            }
+        }
+
+        .secondMenu {
+            position: absolute;
+            top: 65px;
+            // min-height:200px ;
+            left: 0;
+            z-index: 100;
+            display: none;
+            // display: block;
+            // height: 1px;
+            width: 100%;
+            overflow: hidden;
+
+            .menuContent {
+                display: flex;
+                justify-content: space-between;
+                margin: auto;
+                padding: 20px 6% 30px;
+                background-color: @fontColorReverse;
+                border-radius: 4px;
+                // border: 1px solid rebeccapurple;
+                .disable {
+                    color: #0000007a;
+                    cursor: not-allowed !important;
+
+                    &:hover {
+                        color: #0000007a !important;
+                    }
+                }
+
+                .menuContentItem {
+                    width: 45%;
+                    min-width: 30%;
+                    margin-left: 20px;
+                    text-align: left;
+                    // border: 1px solid rebeccapurple;
+                    .menuTitle {
+                        padding: 10px 0;
+                        font-size: 20px;
+                        line-height: 30px;
+                        border-bottom: 1px solid  fade(@fontColor, 10%);
+                    }
+
+                    .active {
+                        color: @primary-color;
+                        border-bottom: 1px solid  fade(@primary-color, 30%);
+                    }
+
+                    .menuTitleItem {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding-top: 10px;
+
+                        >div {
+                            width: 50%;
+                            padding: 5px 0;
+                            line-height: 30px;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: @primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        min-height: 500px;
+    }
+}

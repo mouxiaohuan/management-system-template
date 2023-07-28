@@ -1,0 +1,39 @@
+@import "~@/common/less/color-variable.less";
+
+.Timeline {
+  .ant-timeline-item-tail {
+    border-inline-start: 0;
+  }
+
+  .ant-timeline-item {
+    margin-left: -5px;
+    padding-bottom: 10px;
+  }
+
+  border-inline-start: 1px dashed rgba(5, 5, 5, 0.06);
+
+  .case {
+    .title {
+      display: flex;
+      justify-content: space-between;
+
+      >span {
+        &:last-child {
+          color: rgba(0, 0, 0, 0.447);
+          font-size: 12px;
+        }
+      }
+    }
+
+    .content {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .content2 {
+      color: @primary-color;
+      padding: 10px 0px;
+    }
+  }
+}
