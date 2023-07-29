@@ -2,7 +2,7 @@ import React from 'react';
 import { EllipsisOutlined, PlusOutlined } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable, TableDropdown } from '@ant-design/pro-components';
-import { Button, Dropdown, Menu, Space, Tag, Form } from 'antd';
+import { Button, Dropdown, Menu, Space, Tag } from 'antd';
 import { useRef } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 
@@ -145,10 +145,6 @@ const menu = (
       },
       {
         label: '2nd item',
-        key: '1',
-      },
-      {
-        label: '3rd item',
         key: '1',
       },
     ]}
